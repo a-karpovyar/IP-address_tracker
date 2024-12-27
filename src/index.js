@@ -56,11 +56,11 @@ function setInfo(mapData) {
 
     mymap.setView([mapData.latitude, mapData.longitude]);
     L.marker([mapData.latitude, mapData.longitude], { icon: markerIcon }).addTo(mymap);
-    if(matchMedia('max-width:1023px').matches){
+    if (matchMedia('max-width:1023px').matches) {
         addOffset(mymap);
     }
 }
 
-document.addEventListener('DOMContentLoaded',() =>{
+document.addEventListener('DOMContentLoaded', () => {
     getAddress('102.22.22.1').then(setInfo)
 });
